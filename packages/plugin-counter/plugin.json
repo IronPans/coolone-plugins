@@ -1,0 +1,8 @@
+{
+  "name": "@oneplg/plugin-counter",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "logo": "./logo.jpg",
+  "title": "Counter",
+  "description": "一个简单的计算器"
+}

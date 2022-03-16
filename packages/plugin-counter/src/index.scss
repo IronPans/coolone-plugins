@@ -1,0 +1,95 @@
+@mixin btn_ripple(
+  $hoverColor: rgb(224, 219, 219),
+  $rippleColor: rgb(194, 189, 189),
+  $transTime: 0.8s
+) {
+  overflow: hidden;
+  background-position: center;
+  transition: background $transTime;
+  &:hover {
+    background: $hoverColor
+      radial-gradient(circle, transparent 1%, $hoverColor 1%) center/15000%;
+  }
+  &:active {
+    background-size: 100%;
+    transition: background 0s;
+    background-color: $rippleColor;
+  }
+}
+
+.calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  margin: 30px auto 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.container .calculator-inner {
+  position: relative;
+  display: grid;
+}
+
+.container .calculator-inner .calculator-screen {
+  grid-column: span 4;
+  height: 80px;
+  width: 320px;
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 30px;
+  background-color: transparent;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+
+  .calculator-screen-process {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .calculater-screen-box {
+    overflow: hidden;
+  }
+
+  .calculator-screen-result {
+    float: right;
+
+    .value {
+      white-space: nowrap;
+    }
+  }
+}
+
+.container .calculator-inner .btn {
+  display: grid;
+  place-items: center;
+  height: 80px;
+  width: 80px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.5s;
+  @include btn_ripple(
+    $hoverColor: rgba(255, 255, 255, 0.1),
+    $rippleColor: rgba(255, 255, 255, 0.2)
+  );
+}
+
+.container .calculator-inner .equal,
+.container .calculator-inner .clear {
+  // grid-column: span 2;
+  width: 80px;
+  background: rgba(255, 255, 255, 0.05);
+}
