@@ -8,5 +8,5 @@ A collection of awesome project using [One](https://laixiazheteng.com/one).
 
 | Name                                                         | Introduction                                                 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [one-plugin-counter](https://www.npmjs.com/package/one-plugin-counter) | a simple counter |
+| [coolone-plugin-counter](https://www.npmjs.com/package/coolone-plugin-counter) | a simple counter |
 
