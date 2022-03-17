@@ -1,8 +1,8 @@
 {
-  "name": "@oneplg/plugin-counter",
+  "name": "coolone-plugin-counter",
   "version": "1.0.0",
   "main": "./dist/index.js",
-  "logo": "./logo.jpg",
-  "title": "Counter",
+  "logo": "./logo.png",
+  "title": "计算器",
   "description": "一个简单的计算器"
 }

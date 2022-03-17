@@ -138,6 +138,6 @@ function Counter() {
 }
 
 
-window?.pluginManager?.register('plugin-counter', {
+window?.pluginManager?.register('counter', {
   Comp: Counter,
 });
